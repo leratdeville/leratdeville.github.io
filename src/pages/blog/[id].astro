@@ -4,7 +4,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Button from '../../components/Button.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import PostPreview from '../../components/PostPreview.astro';
-import Subscribe from '../../components/Subscribe.astro';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 import { slugify } from '../../utils/common-utils';
 
@@ -41,7 +40,7 @@ const shareUrl = new URL(Astro.url.pathname, Astro.site).href;
                     <>
                         {' '}
                         <span>
-                            (Updated on <FormattedDate date={updatedDate} />)
+                            (Güncellenme: <FormattedDate date={updatedDate} />)
                         </span>
                     </>
                 )}
@@ -60,19 +59,18 @@ const shareUrl = new URL(Astro.url.pathname, Astro.site).href;
                     ))}
                 </div>
             )}
-            <Button class="copy-url-button" aria-label="Copy link" data-url={shareUrl} data-tooltip-default="Copy link" data-tooltip-success="Copied">
-                Share
+            <Button class="copy-url-button" aria-label="Bağlantıyı kopyala" data-url={shareUrl} data-tooltip-default="Bağlantıyı kopyala" data-tooltip-success="Kopyalandı">
+                Paylaş
             </Button>
         </div>
     </article>
     {(prevPost || nextPost) && (
         <div class="my-16 sm:my-24">
-            <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Read Next</h2>
+            <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Diğer Yazılar</h2>
             {nextPost && <PostPreview post={nextPost} class="mb-10 sm:mb-12" headingLevel="h3" />}
             {prevPost && <PostPreview post={prevPost} class="mb-10 sm:mb-12" headingLevel="h3" />}
         </div>
     )}
-    <Subscribe class="my-16 sm:my-24" />
 </BaseLayout>
 
 <script>
@@ -88,7 +86,7 @@ const shareUrl = new URL(Astro.url.pathname, Astro.site).href;
 
             await navigator.clipboard.writeText(url);
 
-            button.innerText = 'Copied';
+            button.innerText = 'Kopyalandı';
 
             setTimeout(() => {
                 button.innerText = label;
