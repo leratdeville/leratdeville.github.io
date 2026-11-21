@@ -53,7 +53,7 @@ const siteConfig: SiteConfig = {
             href: '/blog'
         },
         {
-            text: 'hakkımda',
+            text: 'hakkında',
             href: '/about'
         }
     ],
