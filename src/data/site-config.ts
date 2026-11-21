@@ -41,34 +41,24 @@ export type SiteConfig = {
 const siteConfig: SiteConfig = {
     website: 'https://leratdeville.github.io',
     title: 'leratdeville',
-    subtitle: ' ',
-    description: 'Kişisel blog',
+    subtitle: '',
+    description: 'kişisel blog',
     headerNavLinks: [
         {
-            text: 'Ana Sayfa',
+            text: 'ana sayfa',
             href: '/'
         },
         {
-            text: 'Yazılar',
+            text: 'yazılar',
             href: '/blog'
         },
         {
-            text: 'Hakkında',
+            text: 'hakkımda',
             href: '/about'
         }
     ],
     footerNavLinks: [],
     socialLinks: [],
-    hero: {
-        title: 'Hoş geldin.',
-        text: 'Buraya kendi giriş metnini yazabilirsin; istemezsen boş bırak.',
-        actions: [
-            {
-                text: 'Yazılara Göz At',
-                href: '/blog'
-            }
-        ]
-    },
     postsPerPage: 8
 };
 
