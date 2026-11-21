@@ -1,0 +1,44 @@
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: blog
+    label: Blog
+    path: src/content/blog
+    type: collection
+    fields:
+      - name: title
+        label: Başlık
+        type: string
+        required: true
+      - name: excerpt
+        label: Kısa Özet
+        type: text
+      - name: publishDate
+        label: Yayın Tarihi
+        type: date
+        required: true
+      - name: isFeatured
+        label: Ana Sayfada Öne Çıkar
+        type: boolean
+      - name: tags
+        label: Etiketler
+        type: list
+      - name: seo
+        label: Kapak Görseli Ayarı
+        type: object
+        fields:
+          - name: image
+            label: Görsel
+            type: object
+            fields:
+              - name: src
+                label: Kapak Görseli Seç
+                type: image
+              - name: alt
+                label: Görsel Açıklaması
+                type: string
+      - name: body
+        label: İçerik
+        type: rich-text
