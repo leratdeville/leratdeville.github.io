@@ -40,7 +40,7 @@ export type SiteConfig = {
 
 const siteConfig: SiteConfig = {
     website: 'https://leratdeville.github.io',
-    title: 'leratdeville',
+    title: 'le rat de ville',
     subtitle: '',
     description: 'kişisel blog',
     headerNavLinks: [
