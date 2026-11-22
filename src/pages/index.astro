@@ -14,7 +14,7 @@ const displayPosts = featuredPosts.length > 0 ? featuredPosts : posts.slice(0, 5
 <BaseLayout description={siteConfig.description}>
     {displayPosts.length > 0 && (
         <div class="mb-16 sm:mb-24">
-            <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">yazılar</h2>
+            <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">son yazılar</h2>
             {displayPosts.map((post) => (
                 <PostPreview post={post} class="mb-10 sm:mb-12" headingLevel="h3" />
             ))}
